@@ -17,7 +17,6 @@ async function fbVideoDownload() {
 		});
 
 		var res = await response.json();
-		console.log(res);
 		var links = res.links;
 
 		if (res.success) {
@@ -32,13 +31,13 @@ async function fbVideoDownload() {
 				if(key == 'Download Low Quality') {
 
 					jQuery('#download-normal').attr('href', links[key]);
+					// append video if one of two exist
 					jQuery('.video').html(`<source src="${links[key]}" type="video/mp4" />`);
-					// jQuery('.video source').attr('src', links[key])
 				} else if(key == 'Download High Quality') {
 
 					jQuery('#download-high').attr('href', links[key]);
+					// append video if one of two exist
 					jQuery('.video').html(`<source src="${links[key]}" type="video/mp4" />`);
-					// jQuery('.video source').attr('src', links[key])
 				}
 			})
 		} else {
