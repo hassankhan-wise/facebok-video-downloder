@@ -23,12 +23,15 @@
             <div class="p-4">
               <div class="input-group">
                 <input id="fb_url" type="text" name="URL" class="form-control" placeholder="Paste Facebook Video link">
-                <button id="download" class="btn btn-primary">Download</button>
+                <button id="download" class="btn btn-primary">
+                  <span class="spinner-grow spinner-grow-sm d-none"></span>
+                  <span class="text">Download</span>
+                </button>
               </div>
             </div>
           </div>
           <!-- result -->
-          <div id="result">
+          <div id="result" class="d-none">
             <div class="row m-0 mt-3 border shadow rounded">
               <div class="col-md-5 p-1">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">
